@@ -62,7 +62,7 @@ const getDayContentClassNames = ({ weekPosition, weekdayPosition, isToday, day }
 .vc-container .vc-weekday {
   font-size: 32px;
   font-weight: bold;
-  color: #FFFFFF;
+  color: #16A34A;
   margin: 20px;
   padding: 10px 0;
   line-height: normal;
@@ -96,7 +96,7 @@ const getDayContentClassNames = ({ weekPosition, weekdayPosition, isToday, day }
 
 .my-day-content:hover {
   color: #FFFFFF;
-  background-color: #EC4899;
+  background-color: #16A34A;
 }
 
 .my-is-today {

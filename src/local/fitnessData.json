@@ -1,0 +1,233 @@
+[
+  {
+    "weekday": 1,
+    "title": "训练：背、肱二头！",
+    "equipment": "弹力带、哑铃凳、哑铃（5KG）、哑铃（3KG）、瑜伽垫",
+    "actionList": [
+      {
+        "actionName": "宽距高位下拉",
+        "groupNum": 4,
+        "actionNum": 12,
+        "images": [],
+        "video": ""
+      },
+      {
+        "actionName": "窄距高位下拉",
+        "groupNum": 4,
+        "actionNum": 12,
+        "images": [],
+        "video": ""
+      },
+      {
+        "actionName": "单臂跪姿下拉",
+        "groupNum": 4,
+        "actionNum": 12,
+        "images": [],
+        "video": ""
+      },
+      {
+        "actionName": "坐姿绳索划船",
+        "groupNum": 5,
+        "actionNum": 10,
+        "images": [],
+        "video": ""
+      },
+      {
+        "actionName": "哑铃锤式弯举",
+        "groupNum": 5,
+        "actionNum": 10,
+        "images": [],
+        "video": ""
+      },
+      {
+        "actionName": "佐特曼弯举",
+        "groupNum": 5,
+        "actionNum": 10,
+        "images": [],
+        "video": ""
+      },
+      {
+        "actionName": "上斜哑铃弯举",
+        "groupNum": 5,
+        "actionNum": 10,
+        "images": [],
+        "video": ""
+      },
+      {
+        "actionName": "哑铃二头弯举",
+        "groupNum": 5,
+        "actionNum": 10,
+        "images": [],
+        "video": ""
+      }
+    ]
+  },
+  {
+    "weekday": 2,
+    "title": "训练：胸、肱三头！",
+    "equipment": "弹力带、哑铃凳、哑铃（5KG）、瑜伽垫",
+    "actionList": [
+      {
+        "actionName": "哑铃上斜卧推",
+        "groupNum": 5,
+        "actionNum": 12,
+        "images": ["/src/assets/images/2-1.gif"],
+        "video": ""
+      },
+      {
+        "actionName": "上斜凳哑铃颈后臂屈伸",
+        "groupNum": 5,
+        "actionNum": 12,
+        "images": [],
+        "video": ""
+      },
+      {
+        "actionName": "哑铃窄距卧推",
+        "groupNum": 5,
+        "actionNum": 12,
+        "images": [],
+        "video": ""
+      },
+      {
+        "actionName": "俯身哑铃臂屈伸",
+        "groupNum": 5,
+        "actionNum": 10,
+        "images": ["/src/assets/images/2-4.gif"],
+        "video": ""
+      },
+      {
+        "actionName": "弹力带夹下胸",
+        "groupNum": 5,
+        "actionNum": 12,
+        "images": [],
+        "video": ""
+      },
+      {
+        "actionName": " 弹力带夹胸",
+        "groupNum": 5,
+        "actionNum": 12,
+        "images": [],
+        "video": ""
+      },
+      {
+        "actionName": "弹力带颈后臂屈伸",
+        "groupNum": 5,
+        "actionNum": 12,
+        "images": [],
+        "video": ""
+      },
+      {
+        "actionName": "倒退弹力带下压",
+        "groupNum": 5,
+        "actionNum": 12,
+        "images": [],
+        "video": ""
+      }
+    ]
+  },
+  {
+    "weekday": 4,
+    "title": "训练：腿臀、腹！",
+    "equipment": "弹力带、哑铃凳、哑铃（5KG）、瑜伽垫",
+    "actionList": [
+      {
+        "actionName": "哑铃窄距深蹲",
+        "groupNum": 4,
+        "actionNum": 12,
+        "images": [],
+        "video": ""
+      },
+      {
+        "actionName": "哑铃宽距深蹲",
+        "groupNum": 4,
+        "actionNum": 12,
+        "images": [],
+        "video": ""
+      },
+      {
+        "actionName": "哑铃俯身弯举腿",
+        "groupNum": 4,
+        "actionNum": 12,
+        "images": [],
+        "video": ""
+      },
+      {
+        "actionName": "保加利亚深蹲",
+        "groupNum": 4,
+        "actionNum": 10,
+        "images": [],
+        "video": ""
+      },
+      {
+        "actionName": "平板卷腹",
+        "groupNum": 6,
+        "actionNum": 15,
+        "images": [],
+        "video": ""
+      },
+      {
+        "actionName": "俄罗斯转体",
+        "groupNum": 4,
+        "actionNum": 20,
+        "images": [],
+        "video": ""
+      },
+      {
+        "actionName": "站姿绳索转体",
+        "groupNum": 4,
+        "actionNum": 10,
+        "images": [],
+        "video": ""
+      },
+      {
+        "actionName": "悬垂举腿",
+        "groupNum": 4,
+        "actionNum": 12,
+        "images": [],
+        "video": ""
+      }
+    ]
+  },
+  {
+    "weekday": 6,
+    "title": "训练：肩！",
+    "equipment": "弹力带、哑铃凳、哑铃（5KG）、瑜伽垫",
+    "actionList": [
+      {
+        "actionName": "对卧推肩",
+        "groupNum": 4,
+        "actionNum": 12,
+        "images": [],
+        "video": ""
+      },
+      {
+        "actionName": "哑铃侧平举",
+        "groupNum": 3,
+        "actionNum": 15,
+        "images": [],
+        "video": ""
+      },
+      {
+        "actionName": "哑铃直立划船",
+        "groupNum": 4,
+        "actionNum": 12,
+        "images": [],
+        "video": ""
+      },
+      {
+        "actionName": "单边绳索侧平举",
+        "groupNum": 3,
+        "actionNum": 12,
+        "images": [],
+        "video": ""
+      },
+      {
+        "actionName": "绳索前平举",
+        "groupNum": 3,
+        "actionNum": 15,
+        "images": [],
+        "video": ""
+      }
+    ]
+  }
+]

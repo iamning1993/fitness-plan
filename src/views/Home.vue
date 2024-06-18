@@ -1,74 +1,98 @@
 <script setup>
-import { reactive, ref } from 'vue' 
+import { ref, reactive } from 'vue' 
 import { Calendar } from 'v-calendar'
+import { useRouter } from 'vue-router'
+import FITNESS_DATA from '@/local/fitnessData.json'
 import 'v-calendar/style.css'
 
-const showData = data => console.log(data)
+const router = useRouter()
 
 const year = new Date().getFullYear()
 const month = new Date().getMonth() + 1
-const todayWeekPosition = ref(null)
-const today = ref(null)
-
-const getDayContentClassNames = ({ weekPosition, weekdayPosition, isToday, day }) => {
-  if (isToday) {
-    todayWeekPosition.value = weekPosition
-    today.value = day
-  }
-  // 训练日为每周1、2、4、6
-  const isFitnessWeekdays = [1, 2, 4, 6]
-  if (today.value <= day && isFitnessWeekdays.includes(weekdayPosition)) {
-    // 如果是训练日
-    return 'my-day-content my-fitness-day'
-  } else if (isToday) {
-    return 'my-day-content my-is-today'
-  } else {
-    return 'my-day-content my-day-default'
-  }
-}
+const fitnessWeekdays = FITNESS_DATA.map(({ weekday }) => weekday) // 星期一、星期二、星期四、星期六
 
 const attributes = reactive([
   {
-    dates: { weekdays: 6 },
-    popover: true
-  }
+    key: 'today',
+    content: 'blue',
+    dates: new Date(),
+  },
+  {
+    highlight: 'orange',
+    dates: { 
+      start: new Date(),
+      repeat: { 
+        weekdays: fitnessWeekdays.map(v => (v + 1))
+      } 
+    }
+  },
+  ...FITNESS_DATA.map(({ weekday, title }) => {
+    return {
+      dates: { 
+        start: new Date(), 
+        repeat: { weekdays: (weekday + 1) }
+      },
+      popover: { 
+        label: title
+      }
+    }
+  })
 ])
+
+const today = ref(new Date().getDate())
+const dayclick = ({ weekdayPosition, day }) => {
+  if ((today.value <= day) && fitnessWeekdays.includes(weekdayPosition)) {
+    // 训练日
+    router.push({
+      path: '/detail',
+      query: {
+        weekday: weekdayPosition
+      }
+    })
+  }
+}
 </script>
 
 <template>
-  <div class="my-header-title">{{ year }}-{{ month }}</div>
-  <Calendar 
-    expanded 
-    borderless 
-    trim-weeks 
-    is-dark 
-    :attributes="attributes"
-  >
-    <template #day-content="{ day }">
-      <div :class="getDayContentClassNames(day)">
-        <div class="day-number">{{ day.day }}</div>
-        <div class="today-block" v-if="day.isToday"></div>
-      </div>
-      <!-- {{ day.day === 17 ? showData(day) : '' }} -->
-    </template>
-  </Calendar>
+  <div class="fitness-home-page">
+    <div class="my-header-title">{{ year }}-{{ month > 9 ? month : `0${ month }` }}</div>
+    <Calendar 
+      expanded 
+      borderless 
+      trim-weeks 
+      is-dark
+      :attributes="attributes" 
+      @dayclick="dayclick"
+    >
+      <template #day-popover="{ attributes }">
+        <div class="day-popover-content text-xs text-gray-700 dark:text-gray-300">
+          {{ attributes[0].popover.label }}
+        </div>
+      </template>
+    </Calendar>
+  </div>
 </template>
 
 <style>
+.fitness-home-page {
+  min-height: 100vh;
+  background-color: #0f172a;
+}
+
 .my-header-title {
-  font-size: 32px;
+  font-size: 48px;
   font-weight: bold;
   color: #ea580c;
   text-align: center;
   padding: 30px 0;
 }
 
-.vc-header {
+.vc-container .vc-header {
   display: none;
 }
 
 .vc-container .vc-weekday {
-  font-size: 32px;
+  font-size: 48px;
   font-weight: bold;
   color: #3b82f6;
   line-height: normal;
@@ -81,55 +105,22 @@ const attributes = reactive([
   color: #ea580c;
 }
 
-.my-day-content {
-  position: relative;
-  width: calc(100% - 40px);
-  height: 60px;
-  margin: 10px 20px;
-  padding: 15px;
-  font-size: 32px;
+.vc-container .vc-day-content {
+  height: 100px;
+  width: 100px;
+  font-size: 48px;
   font-weight: bold;
-  color: #FFFFFF;
-  border-radius: 5px;
-  cursor: pointer;
+  margin: 20px;
+  padding: 15px;
 }
 
-.my-day-default:hover {
-  color: #FFFFFF;
-  background-color: #1e293b;
+.vc-container .vc-highlight {
+  height: 100px;
+  width: 100px;
 }
 
-.today-block {
-  width: 100%;
-  height: 30px;
-  background-color: #3b82f6;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 1;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.day-number {
-  width: 100%;
-  height: 60px;
-  line-height: 60px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  padding: 0 10px;
-  text-align: center;
-}
-
-.my-is-today {
-  color: #FFFFFF;
-  background-color: #EC4899;
-}
-
-.my-fitness-day {
-  color: #FFFFFF;
-  background-color:	#ea580c;
+.day-popover-content {
+  font-size: 18px;
+  padding: 8px;
 }
 </style>

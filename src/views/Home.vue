@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue' 
+import { reactive, ref } from 'vue' 
 import { Calendar } from 'v-calendar'
 import 'v-calendar/style.css'
 
@@ -15,7 +15,6 @@ const getDayContentClassNames = ({ weekPosition, weekdayPosition, isToday, day }
     todayWeekPosition.value = weekPosition
     today.value = day
   }
-  let classNames = 'my-day-content'
   // 训练日为每周1、2、4、6
   const isFitnessWeekdays = [1, 2, 4, 6]
   if (today.value <= day && isFitnessWeekdays.includes(weekdayPosition)) {
@@ -24,9 +23,16 @@ const getDayContentClassNames = ({ weekPosition, weekdayPosition, isToday, day }
   } else if (isToday) {
     return 'my-day-content my-is-today'
   } else {
-    return 'my-day-content'
+    return 'my-day-content my-day-default'
   }
 }
+
+const attributes = reactive([
+  {
+    dates: { weekdays: 6 },
+    popover: true
+  }
+])
 </script>
 
 <template>
@@ -36,12 +42,14 @@ const getDayContentClassNames = ({ weekPosition, weekdayPosition, isToday, day }
     borderless 
     trim-weeks 
     is-dark 
+    :attributes="attributes"
   >
     <template #day-content="{ day }">
       <div :class="getDayContentClassNames(day)">
-        {{ day.day }}
+        <div class="day-number">{{ day.day }}</div>
+        <div class="today-block" v-if="day.isToday"></div>
       </div>
-      {{ day.day === 17 ? showData(day) : '' }}
+      <!-- {{ day.day === 17 ? showData(day) : '' }} -->
     </template>
   </Calendar>
 </template>
@@ -50,7 +58,7 @@ const getDayContentClassNames = ({ weekPosition, weekdayPosition, isToday, day }
 .my-header-title {
   font-size: 32px;
   font-weight: bold;
-  color: #DC143C;
+  color: #ea580c;
   text-align: center;
   padding: 30px 0;
 }
@@ -62,41 +70,57 @@ const getDayContentClassNames = ({ weekPosition, weekdayPosition, isToday, day }
 .vc-container .vc-weekday {
   font-size: 32px;
   font-weight: bold;
-  color: #16A34A;
-  margin: 20px;
-  padding: 10px 0;
+  color: #3b82f6;
   line-height: normal;
-  border-radius: 5px;
-}
-
-.vc-container .vc-weekdays {
-  border-radius: 5px;
-  margin: 15px;
 }
 
 .vc-container .vc-weekday-2, 
 .vc-container .vc-weekday-3,
 .vc-container .vc-weekday-5,
 .vc-container .vc-weekday-7 {
-  color: #DC143C;
+  color: #ea580c;
 }
 
 .my-day-content {
+  position: relative;
   width: calc(100% - 40px);
+  height: 60px;
   margin: 10px 20px;
   padding: 15px;
   font-size: 32px;
   font-weight: bold;
   color: #FFFFFF;
-  background-color:	#000000;
   border-radius: 5px;
   cursor: pointer;
-  text-align: center;
 }
 
-.my-day-content:hover {
+.my-day-default:hover {
   color: #FFFFFF;
-  background-color: #16A34A;
+  background-color: #1e293b;
+}
+
+.today-block {
+  width: 100%;
+  height: 30px;
+  background-color: #3b82f6;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.day-number {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 0 10px;
+  text-align: center;
 }
 
 .my-is-today {
@@ -106,6 +130,6 @@ const getDayContentClassNames = ({ weekPosition, weekdayPosition, isToday, day }
 
 .my-fitness-day {
   color: #FFFFFF;
-  background-color:	#DC143C;
+  background-color:	#ea580c;
 }
 </style>

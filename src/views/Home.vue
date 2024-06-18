@@ -29,7 +29,6 @@ const attributes = reactive([
   ...FITNESS_DATA.map(({ weekday, title }) => {
     return {
       dates: { 
-        start: new Date(), 
         repeat: { weekdays: (weekday + 1) }
       },
       popover: { 
@@ -60,12 +59,15 @@ const dayclick = ({ weekdayPosition, day }) => {
       expanded 
       borderless 
       trim-weeks 
-      is-dark
+      is-dark 
       :attributes="attributes" 
       @dayclick="dayclick"
     >
-      <template #day-popover="{ attributes }">
+      <template #day-popover="{ attributes, day }">
         <div class="day-popover-content text-xs text-gray-700 dark:text-gray-300">
+          {{ console.log(day) }}
+          {{ day.ariaLabel }}
+          <br><br>
           {{ attributes[0].popover.label }}
         </div>
       </template>

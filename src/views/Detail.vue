@@ -43,7 +43,7 @@ const finish = () => {
           </template>
           <a-image-preview-group infinite>
             <a-space wrap>
-              <a-image class="my-a-iamge" v-for="imgSrc in action.images" :src="imgSrc" height="200" width="300" fit="contain"/>
+              <a-image class="my-a-iamge" v-for="imgSrc in action.images" :src="imgSrc" height="200" width="200" fit="contain"/>
             </a-space>
           </a-image-preview-group>
         </a-typography-paragraph>

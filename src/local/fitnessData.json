@@ -153,31 +153,42 @@
     "equipment": "弹力带、哑铃凳、哑铃（5KG）、瑜伽垫",
     "actionList": [
       {
-        "actionName": "哑铃窄距深蹲",
-        "groupNum": 4,
-        "actionNum": 12,
-        "images": [],
-        "video": ""
-      },
-      {
         "actionName": "哑铃宽距深蹲",
         "groupNum": 4,
         "actionNum": 12,
-        "images": [],
+        "descList": [
+          "身体正直，双腿比肩宽，脚尖朝外保持15度左右，双手托住哑铃放置身体中立位。",
+          "吸气向下，髋关节和膝关节屈曲，使大腿与地面平行，膝关节的方向和脚尖一致对齐。",
+          "呼气向上，返回至起始位置。",
+          "下蹲时，保持大腿与地面平行；膝关节不要过度超过脚尖，背部保持正直，双脚位置保持原地不动。"
+        ],
+        "images": ["/src/assets/images/Thu/1-1.webp"],
+        "video": ""
+      },
+      {
+        "actionName": "杰斐逊深蹲",
+        "groupNum": 4,
+        "actionNum": 12,
+        "descList": [
+          "双腿比肩略宽，脚尖朝外15度左右，双手交叉竖握哑铃位于双腿之间，身体微微向前倾。",
+          "吸气向下，髋部屈曲自然过度到膝关节屈曲，把哑铃放置地面，双脚保持原来位置不动。",
+          "呼气向上，利用腿部和臀部的力量将哑铃抬起至起始位置，注意膝关节不要超伸。"
+        ],
+        "images": ["/src/assets/images/Thu/2-1.webp"],
         "video": ""
       },
       {
         "actionName": "哑铃俯身弯举腿",
         "groupNum": 4,
         "actionNum": 12,
-        "images": [],
+        "images": ["/src/assets/images/Thu/3-1.webp"],
         "video": ""
       },
       {
         "actionName": "保加利亚深蹲",
         "groupNum": 4,
         "actionNum": 10,
-        "images": [],
+        "images": ["/src/assets/images/Thu/4-1.mp4"],
         "video": ""
       },
       {
@@ -191,21 +202,24 @@
         "actionName": "俄罗斯转体",
         "groupNum": 4,
         "actionNum": 20,
-        "images": [],
-        "video": ""
-      },
-      {
-        "actionName": "站姿绳索转体",
-        "groupNum": 4,
-        "actionNum": 10,
-        "images": [],
+        "images": ["/src/assets/images/Thu/5-1.jpeg", "/src/assets/images/Thu/5-2.jpeg", "/src/assets/images/Thu/5-3.jpeg"],
         "video": ""
       },
       {
         "actionName": "悬垂举腿",
         "groupNum": 4,
         "actionNum": 12,
-        "images": [],
+        "descList": [
+          "悬垂举腿的准备姿式是将身体特别稳定的固定在悬垂举腿的器械上。",
+          "要求双手握紧握把，上身紧贴在靠背上。",
+          "眼睛平视前方，收腹挺胸。",
+          "双腿并拢垂直向下，脚面绷直。",
+          "双腿飞快举腿，到与地面水平的位置。",
+          "停留一秒钟的工夫缓慢的放下到原来的位置上。",
+          "快起慢回，使腹肌一直保持在紧张的状态，锻炼效果更佳。",
+          "缩起小腿时吸气，降落时呼气。"
+        ],
+        "images": ["/src/assets/images/Thu/6-1.webp"],
         "video": ""
       }
     ]
@@ -216,38 +230,60 @@
     "equipment": "弹力带、哑铃凳、哑铃（5KG）、瑜伽垫",
     "actionList": [
       {
-        "actionName": "对卧推肩",
+        "actionName": "哑铃对卧推肩",
         "groupNum": 4,
         "actionNum": 12,
-        "images": [],
+        "descList": [
+          "首先 坐在长凳的尽头，将两个哑铃放在膝盖上。",
+          "向后躺 直到平躺在长凳上，保持双臂弯曲。",
+          "向上推 哑铃，直到你的手臂垂直。",
+          "降低 哑铃，直到把手处于胸部高度，然后重复。",
+          "起身前慢慢将 哑铃放回地面。"
+        ],
+        "images": ["/src/assets/images/Sat/1-1.jpeg"],
         "video": ""
       },
       {
         "actionName": "哑铃侧平举",
         "groupNum": 3,
         "actionNum": 15,
-        "images": [],
+        "descList": [
+          "抬头挺胸，坐于训练凳上，双手各持哑铃，置于身侧，双臂充分伸直，掌心相对。",
+          "举起双臂，双臂与地面平行为止，与腋下呈 90 度角，肘关节微屈。",
+          "回到起始位置。"
+        ],
+        "images": ["/src/assets/images/Sat/2-1.png"],
         "video": ""
       },
       {
         "actionName": "哑铃直立划船",
         "groupNum": 4,
         "actionNum": 12,
-        "images": [],
+        "images": ["/src/assets/images/Sat/3-1.webp"],
         "video": ""
       },
       {
-        "actionName": "单边绳索侧平举",
+        "actionName": "哑铃前平举",
         "groupNum": 3,
         "actionNum": 12,
-        "images": [],
+        "descList": [
+          "坐在训练凳上，双臂置于身体两侧，双手握哑铃，稍偏前，掌心朝后。",
+          "直臂向身体正前方举起哑铃，双臂与肩同高为止。",
+          "将哑铃放回起始位置，也可用杠铃进行练习，可以躺在斜凳上，以增加哑铃的移动距离。"
+        ],
+        "images": ["/src/assets/images/Sat/4-1.png"],
         "video": ""
       },
       {
-        "actionName": "绳索前平举",
+        "actionName": "哑铃俯身飞鸟",
         "groupNum": 3,
         "actionNum": 15,
-        "images": [],
+        "descList": [
+          "坐于凳子一端，身体前倾，上背与地面平行，胸部接触膝关节，目视地面，头与后背呈直线，双臂下垂，掌心相对，双手各持哑铃。",
+          "肘关节微屈，直臂后拉哑铃，双臂与地面平行为止。",
+          "最高点时暂停，默数1、2，然后放下哑铃，哑铃始终离开地面，让肌肉持续承受压力。"
+        ],
+        "images": ["/src/assets/images/Sat/5-1.png"],
         "video": ""
       }
     ]

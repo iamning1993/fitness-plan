@@ -8,6 +8,12 @@
         "actionName": "坐姿绳索划船",
         "groupNum": 5,
         "actionNum": 20,
+        "descList": [
+          "重点关注身体姿势，身体处于收紧状态，双脚牢牢踩在地面或支撑面上，增加稳定性，控制负重。绳索拉力器对上体没有任何支撑，必须保持正确身体姿势，目视前方，挺胸，上体直立，收腹，腰部挺直，双臂伸展，手柄应与身体保持一臂距离。", 
+          "抓住手柄，将其缓慢拉向胸部位置，肩胛骨内收。", 
+          "充分后拉，稍停默数1、2，不要借助弯腰的动力后拉手柄。",
+          "对抗负重，缓慢伸直双臂，回到起始位置。"
+        ],
         "images": ["/src/assets/images/Mon/1-1.png", "/src/assets/images/Mon/1-2.png"],
         "video": ""
       },
@@ -19,31 +25,49 @@
         "video": ""
       },
       {
-        "actionName": "哑铃锤式弯举",
+        "actionName": "哑铃弯举",
         "groupNum": 5,
-        "actionNum": 10,
-        "images": [],
+        "actionNum": 20,
+        "descList": [
+          "站立，双臂充分伸展，置于体侧，双手握哑铃，掌心相对。",
+          "缓慢弯曲双臂，减小肘夹角，哑铃弧形移动，双肘固定于体侧。",
+          "将哑铃举至肩部，挤压肱二头肌，稍停默数1、2，在移动过程中，扭转哑铃，让掌心指向肩部，最大程度激活肱二头肌，将哑铃缓慢放回体侧。"
+        ],
+        "images": ["/src/assets/images/Mon/3-1.png", "/src/assets/images/Mon/3-2.png"],
         "video": ""
       },
       {
-        "actionName": "佐特曼弯举",
+        "actionName": "哑铃锤式弯举",
         "groupNum": 5,
-        "actionNum": 10,
-        "images": [],
+        "actionNum": 20,
+        "descList": [
+          "挑选合适的重量，双手紧握哑铃（绳索）掌心相对",
+          "双腿打开与肩同宽，收腹挺胸，目视前方",
+          "保证你的肘关节在你的身体两侧或者稍前的位置"
+        ],
+        "images": ["/src/assets/images/Mon/4-1.png"],
         "video": ""
       },
       {
         "actionName": "上斜哑铃弯举",
         "groupNum": 5,
         "actionNum": 10,
-        "images": [],
+        "descList": [
+          "躯干与地面形成一定的倾斜角度，手臂位于躯干后侧且形成垂直于地面的角度进行弯举。"
+        ],
+        "images": ["/src/assets/images/Mon/5-1.webp"],
         "video": ""
       },
       {
-        "actionName": "哑铃二头弯举",
+        "actionName": "腕弯举",
         "groupNum": 5,
-        "actionNum": 10,
-        "images": [],
+        "actionNum": 20,
+        "descList": [
+          "跪在椅子或训练凳旁边，前臂置于椅凳上，手腕越过支撑面边沿，悬空。",
+          "训练手臂内侧屈肌，将前臂外侧置于椅凳上，掌心朝上，抓住哑铃，弯曲或松开手腕，动作相对缓慢，在腕关节活动范围内充分移动。",
+          "训练前臂背面伸肌，将前臂内侧置于椅凳上，掌心朝下，抓住哑铃。弯曲和松开手腕，动作相对缓慢。"
+        ],
+        "images": ["/src/assets/images/Mon/6-1.png", "/src/assets/images/Mon/6-2.png"],
         "video": ""
       }
     ]
@@ -54,59 +78,71 @@
     "equipment": "弹力带、哑铃凳、哑铃（5KG）、瑜伽垫",
     "actionList": [
       {
-        "actionName": "哑铃上斜卧推",
+        "actionName": "哑铃卧推",
         "groupNum": 5,
-        "actionNum": 12,
-        "images": ["/src/assets/images/Tue/1-1.gif"],
+        "actionNum": 15,
+        "descList": [
+          "坐于凳子一端，两手持铃置于左右大腿之上，上体下躺，收紧躯干，上提哑铃置于胸部。",
+          "左手持铃不动，右手举起哑铃，手臂伸直，稍停，然后放下，再重复左手动作。",
+          "双臂可每次交替或每组交替，交替练习可使双臂疲惫程度相似。"
+        ],
+        "images": ["/src/assets/images/Tue/1-1.png", "/src/assets/images/Tue/1-2.png"],
         "video": ""
       },
       {
-        "actionName": "上斜凳哑铃颈后臂屈伸",
+        "actionName": "哑铃飞鸟",
         "groupNum": 5,
-        "actionNum": 12,
-        "images": [],
+        "actionNum": 20,
+        "descList": [
+          "躺于平凳上，双臂充分伸展，双手持哑铃置于胸部正上方，掌心向内，哑铃触碰在一起。",
+          "肘部保持微弯，直臂外展至与地面平行。",
+          "当哑铃移动到最低位置时，稍停，默数1、2。",
+          "运用“熊抱式移动”，将哑铃推至最上方。"
+        ],
+        "images": ["/src/assets/images/Tue/2-1.png", "/src/assets/images/Tue/2-2.png"],
         "video": ""
       },
       {
         "actionName": "哑铃窄距卧推",
         "groupNum": 5,
-        "actionNum": 12,
+        "actionNum": 15,
         "images": [],
         "video": ""
       },
       {
-        "actionName": "俯身哑铃臂屈伸",
+        "actionName": "肱三头肌哑铃俯身臂屈伸",
         "groupNum": 5,
-        "actionNum": 10,
-        "images": ["/src/assets/images/Tue/4-1.gif"],
+        "actionNum": 20,
+        "descList": [
+          "前后站立，双膝微屈，身体前倾，右手置于右脚膝盖进行支撑，背部平直，左手持哑铃。肘朝后上方。",
+          "尽量向后伸展左臂，充分伸展手臂会有一点不舒服，如果没有，肘关节位置可能还不够高。",
+          "移动至最高点稍停，默数1、2，然后恢复起始姿势。"
+        ],
+        "images": ["/src/assets/images/Tue/4-1.png", "/src/assets/images/Tue/4-2.png"],
         "video": ""
       },
       {
-        "actionName": "弹力带夹下胸",
+        "actionName": "肱三头肌颈后臂屈伸",
         "groupNum": 5,
-        "actionNum": 12,
-        "images": [],
+        "actionNum": 20,
+        "descList": [
+          "站立，双脚与肩同宽，或坐于训练凳上，后背平直，右手持哑铃，举铃过顶，肘置于耳侧。",
+          "肘关节指向天花板，充分伸展手臂，哑铃从头后移至头顶。",
+          "移动至顶点位置稍停，默数1、2，然后缓慢放下哑铃，置于头后，恢复起始姿势，可将头稍向前或向侧移动，以免碰撞。"
+        ],
+        "images": ["/src/assets/images/Tue/5-1.png", "/src/assets/images/Tue/5-2.png"],
         "video": ""
       },
       {
-        "actionName": " 弹力带夹胸",
+        "actionName": "仰卧肱三头肌臂屈伸",
         "groupNum": 5,
-        "actionNum": 12,
-        "images": [],
-        "video": ""
-      },
-      {
-        "actionName": "弹力带颈后臂屈伸",
-        "groupNum": 5,
-        "actionNum": 12,
-        "images": [],
-        "video": ""
-      },
-      {
-        "actionName": "倒退弹力带下压",
-        "groupNum": 5,
-        "actionNum": 12,
-        "images": [],
+        "actionNum": 15,
+        "descList": [
+          "仰卧于训练凳上，双手抓握杠铃杆，将其移至头后位置，双肘指向前上方，腋下夹角在90~120度，掌心朝上。",
+          "伸展双臂，当充分伸展时，杠铃位于下巴正上方，而不是双眼正上方，肱三头肌始终处于紧张状态。",
+          ". 最高点稍停，默数1、2，然后恢复起始姿势，杠铃位于头部后方位置。有人喜欢将杠铃置于额部，因此得名为砸颅练习。从安全和增加移动范围考虑，应将杠铃移至头后。"
+        ],
+        "images": ["/src/assets/images/Tue/6-1.png", "/src/assets/images/Tue/6-2.png"],
         "video": ""
       }
     ]

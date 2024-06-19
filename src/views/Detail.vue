@@ -37,9 +37,13 @@ const finish = () => {
               </template>
             </a-rate>
           </a-space>
+          <template v-for="(desc, index) in action.descList">
+            <a-typography-text type="secondary">{{ `${ index + 1 }. ` }}{{ desc }}</a-typography-text>
+            <br/>
+          </template>
           <a-image-preview-group infinite>
             <a-space wrap>
-              <a-image v-for="imgSrc in action.images" :src="imgSrc" height="100" width="200" fit="cover"/>
+              <a-image class="my-a-iamge" v-for="imgSrc in action.images" :src="imgSrc" height="200" width="300" fit="contain"/>
             </a-space>
           </a-image-preview-group>
         </a-typography-paragraph>
@@ -59,6 +63,10 @@ const finish = () => {
 .finish-btn {
   width: 100%;
   margin: 10px 0 100px 0;
+}
+
+.my-a-iamge {
+  background-color: var(--color-neutral-2);
 }
 </style>
 

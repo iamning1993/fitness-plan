@@ -32,7 +32,7 @@ const finish = () => {
           </a-space>
           <a-image-preview-group infinite>
             <a-space wrap>
-              <a-image v-for="imgSrc in action.images" :src="imgSrc" width="200"/>
+              <a-image v-for="imgSrc in action.images" :src="imgSrc" height="100" width="200" fit="cover"/>
             </a-space>
           </a-image-preview-group>
         </a-typography-paragraph>

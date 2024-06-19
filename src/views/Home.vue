@@ -8,21 +8,33 @@ import 'v-calendar/style.css'
 const router = useRouter()
 
 const year = new Date().getFullYear()
-const month = new Date().getMonth() + 1
+const attributesMonth = new Date().getMonth()
+const month = attributesMonth + 1
+const today = new Date().getDate()
+
 const fitnessWeekdays = FITNESS_DATA.map(({ weekday }) => weekday) // 星期一、星期二、星期四、星期六
 
+const disabledDates = ref([{ start: null, end: new Date() }])
 const attributes = reactive([
   {
     key: 'today',
-    content: 'blue',
+    content: {
+      color: 'blue',
+      class: 'italic'
+    },
     dates: new Date(),
   },
   {
-    highlight: 'orange',
+    highlight: {
+      color: 'orange',
+      fillMode: 'solid'
+    },
     dates: { 
-      start: new Date(),
       repeat: { 
-        weekdays: fitnessWeekdays.map(v => (v + 1))
+        on: ({ day, weekday }) => {
+          const fitnessWeekdaysPlus = fitnessWeekdays.map(v => (v + 1))
+          return today < day && fitnessWeekdaysPlus.includes(weekday)
+        }
       } 
     }
   },
@@ -38,9 +50,8 @@ const attributes = reactive([
   })
 ])
 
-const today = ref(new Date().getDate())
 const dayclick = ({ weekdayPosition, day }) => {
-  if ((today.value <= day) && fitnessWeekdays.includes(weekdayPosition)) {
+  if ((today <= day) && fitnessWeekdays.includes(weekdayPosition)) {
     // 训练日
     router.push({
       path: '/detail',
@@ -61,6 +72,7 @@ const dayclick = ({ weekdayPosition, day }) => {
       trim-weeks 
       is-dark 
       :attributes="attributes" 
+      :disabled-dates="disabledDates" 
       @dayclick="dayclick"
     >
       <template #day-popover="{ attributes, day }">
@@ -124,5 +136,9 @@ const dayclick = ({ weekdayPosition, day }) => {
 .day-popover-content {
   font-size: 18px;
   padding: 8px;
+}
+
+.italic {
+  font-style: italic;
 }
 </style>

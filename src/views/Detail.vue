@@ -1,16 +1,23 @@
 <script setup>
 import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { Modal } from '@arco-design/web-vue'
 import FITNESS_DATA from '@/local/fitnessData.json'
 
 const route = useRoute()
 const router = useRouter()
 
 const fitness = computed(() => FITNESS_DATA.find(v => v.weekday == route.query.weekday))
-console.log(fitness.value);
 
 const finish = () => {
-  router.back()
+  Modal.success({
+    title: '完成训练',
+    content: '恭喜完成训练，请及时拍照记录！',
+    bodyClass: 'my-modal-content',
+    onOk: () => {
+      router.back()
+    }
+  })
 }
 </script>
 
@@ -52,5 +59,14 @@ const finish = () => {
 .finish-btn {
   width: 100%;
   margin: 10px 0 100px 0;
+}
+</style>
+
+<style>
+.my-modal-content {
+  font-size: 18px !important;
+  font-weight: bold;
+  text-align: center;
+  color: #ea580c;
 }
 </style>

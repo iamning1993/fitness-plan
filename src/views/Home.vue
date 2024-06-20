@@ -33,7 +33,11 @@ const attributes = reactive([
       repeat: { 
         on: ({ day, weekday }) => {
           const fitnessWeekdaysPlus = fitnessWeekdays.map(v => (v + 1))
-          return today < day && fitnessWeekdaysPlus.includes(weekday)
+          if (today === day) {
+            return fitnessWeekdaysPlus.includes(weekday)
+          } else {
+            return today < day && fitnessWeekdaysPlus.includes(weekday)
+          }
         }
       } 
     }

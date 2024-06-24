@@ -41,6 +41,7 @@ const finish = () => {
             <a-typography-text type="secondary">{{ `${ index + 1 }. ` }}{{ desc }}</a-typography-text>
             <br/>
           </template>
+          <div><a v-if="action.link" target="_blank" :href="action.link.src">{{ action.link.desc }}</a></div>
           <a-image-preview-group infinite>
             <a-space wrap>
               <a-image class="my-a-iamge" v-for="imgSrc in action.images" :src="imgSrc" height="200" width="200" fit="contain"/>
